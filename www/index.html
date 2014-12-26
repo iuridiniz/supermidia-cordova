@@ -78,12 +78,10 @@
 
         function showOnline() {
             /* load content when done show online */
-            $("#online").load(function() {
-                $("#offline").hide(); 
-                $("#online").show();
-            });
 
             /* load the page */
+            $("#offline").hide(); 
+            $("#online").show();
             $("#online")[0].src = "http://" + myhost ;
         }
         function showOffline() {
