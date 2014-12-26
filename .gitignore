@@ -38,3 +38,7 @@ platforms/android/gen
 platforms/android/out
 # Gradle builds
 platforms/android/build
+
+# all platform and plugins
+platforms
+plugins
