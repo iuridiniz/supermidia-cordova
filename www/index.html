@@ -36,7 +36,7 @@
         var myhost = "www.supermidia.tv";
         var timeoutCheck = null;
         var intervalCheck = 60 * 1000;
-
+        
         function onDeviceReady() {
             check(myhost);
         }
@@ -63,7 +63,7 @@
             hostReachable(host, function() {
                 /* I'm online */
                 /* load content when done show online */
-                console.debug("I has wifi and I can reach '" + host + "', so display it");                
+                console.debug("I has wifi and I can reach '" + host + "', so display it");
                 showOnline();
             }, function() {
                 /* else show offline and check again in 60 seconds (IDEAL: each second, then 2x (up limit 5 minutes)*/ 
@@ -89,7 +89,7 @@
         }
         function showOffline() {
             $("#online").hide();
-            $("#offline").show();        
+            $("#offline").show();
         }
        
         function hasWifi() {
