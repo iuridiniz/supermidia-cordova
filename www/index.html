@@ -62,7 +62,7 @@
         //var refreshInterval = 60 * 1000;
         
         function onDeviceReady() {
-            /* Have anyone setup where I am located ? */
+            /* Has anyone setted up where I am located ? */
             var mysite = localStorage.getItem("mysite");
             if (!mysite) {
                 while (!mysite) {
@@ -75,7 +75,7 @@
             var ping_url = "http://service." + myhost + "/service/salva/" + mysite;
             var offline_url = "./" + offline_page;
 
-            /* setup a periodic ping */
+            /* let´s setup a periodic ping */
             var pingTimeout = null;
             var ping = function() {
                 window.clearTimeout(pingTimeout);
@@ -92,7 +92,7 @@
                 }, 'GET');
             };
 
-            /* app is up, so let's show online url when possible */
+            /* My app is up, so let's show mysite when internet is up */
             var refreshTimeout = null;
             var refresh = function() {
                 window.clearTimeout(refreshTimeout);
@@ -119,8 +119,8 @@
                     /* I can reach check_url */
                     console.debug("I has wifi and I can reach '" + check_url + "', so display it");
                     showURL(check_url, content_hold, true, false);
-                    /* refresh again in refreshInterval */
-                    console.debug("I will refresh '" + check_url + "' in " + refreshInterval + "ms");
+                    /* refresh again after refreshInterval */
+                    console.debug("I will refresh '" + check_url + "' after " + refreshInterval + "ms");
                     refreshTimeout = window.setTimeout(function() {
                         refresh();
                     }, refreshInterval);
