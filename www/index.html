@@ -187,7 +187,7 @@
                 if (replacePrevious) {
                     place.children("iframe").each(function(index) {
                         if (this != that) {
-                            this.remove();
+                            $(this).remove();
                         }
                     });
                 }
